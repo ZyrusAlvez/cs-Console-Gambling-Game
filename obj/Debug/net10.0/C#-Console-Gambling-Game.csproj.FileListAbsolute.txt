@@ -1,0 +1,15 @@
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\bin\Debug\net10.0\C#-Console-Gambling-Game.exe
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\bin\Debug\net10.0\C#-Console-Gambling-Game.deps.json
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\bin\Debug\net10.0\C#-Console-Gambling-Game.runtimeconfig.json
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\bin\Debug\net10.0\C#-Console-Gambling-Game.dll
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\bin\Debug\net10.0\C#-Console-Gambling-Game.pdb
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.AssemblyInfoInputs.cache
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.AssemblyInfo.cs
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.csproj.CoreCompileInputs.cache
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.sourcelink.json
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.dll
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\refint\C#-Console-Gambling-Game.dll
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.pdb
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\C#-Console-Gambling-Game.genruntimeconfig.cache
+C:\Users\zyrus\Projects\C#-Console-Gambling-Game\obj\Debug\net10.0\ref\C#-Console-Gambling-Game.dll
