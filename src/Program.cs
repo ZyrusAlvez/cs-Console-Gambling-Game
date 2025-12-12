@@ -1,3 +1,5 @@
+using GameMechanics;
+
 namespace Game
 {
     class Progam

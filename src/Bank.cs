@@ -4,24 +4,16 @@ namespace Game
     {
         public int Balance { get; private set; } = Balance;
         
-        public bool AddBalance(int amount)
+        public int AddBalance(int amount)
         {
-            if(amount > 0)
-            {
-                Balance += amount;
-                return true;
-            }
-            return false;
+            Balance += amount;
+            return Balance;
         }
 
-        public bool ReduceBalance(int amount)
+        public int ReduceBalance(int amount)
         {
-            if(amount > 0)
-            {
-                Balance -= amount;
-                return true;
-            }
-            return false;
+            Balance -= amount;
+            return Balance; 
         }
     }
 }
