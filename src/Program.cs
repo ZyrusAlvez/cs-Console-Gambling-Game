@@ -1,8 +1,9 @@
 using GameMechanics;
+using Utils;
 
 namespace Game
 {
-    class Progam
+    static class Program
     {
         static void Main()
         {   
@@ -11,31 +12,29 @@ namespace Game
             Bank player = new();
             Bank hoster = new();
 
-            player.AddBalance(InputNumber("Enter your desired amount: "));
-            hoster.AddBalance(InputNumber("Enter your opponent's amount: "));
-    
-        }
+            player.AddBalance(Utility.InputNumber("Enter your desired amount: "));
+            hoster.AddBalance(Utility.InputNumber("Enter your opponent's amount: "));
 
-        static int InputNumber(string message)
-        {   
-            int inputNumber = default;
-            bool success = false;
-            while (!success)
+            while(player.Balance > 0 && hoster.Balance > 0)
             {
-                Console.Write(message);
-                string playerInput = Console.ReadLine() ?? "";
-                success = int.TryParse(playerInput, out inputNumber);
-
-                if (!success) Console.WriteLine("Invalid input. Please enter a valid number.");
-                if (success && inputNumber <= 0)
+                string inputMode;
+                do
                 {
-                    Console.WriteLine("Invalid input. Please enter a valid amount.");
-                    success = false;
-                }
+                    Console.Write("1. Reme\n2. Leme\nEnter Game Mode: ");
+                    inputMode = Console.ReadLine() ?? "";
+                    Console.Clear();
+                }while(inputMode != "1" && inputMode != "2");
 
-                Console.Clear();
+                Roulette game = new(
+                    inputMode == "1" ? GameMode.reme : GameMode.leme,
+                    player,
+                    hoster
+                );
+
+                int bet = Utility.InputNumber("Enter your bet: ");
             }
-            return inputNumber;
+            
         }
+
     }
 }
