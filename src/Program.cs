@@ -116,7 +116,7 @@ namespace Game
         static int Spin()
         {
             int result = default;
-            int random_count = 2;
+            int random_count = 12;
 
             for(int i = 0; i < random_count; i++)
             {
