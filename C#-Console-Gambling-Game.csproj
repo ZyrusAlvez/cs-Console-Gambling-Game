@@ -6,7 +6,6 @@
     <RootNamespace>C__Console_Gambling_Game</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Compile Include="src/Utility.cs" />
   </PropertyGroup>
 
 </Project>
