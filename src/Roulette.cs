@@ -25,7 +25,7 @@ namespace GameMechanics
             [7] = [7, 16, 25, 34],
             [8] = [8, 17, 26, 35],
             [9] = [9, 18, 27, 36],
-            [10] = [0, 19, 28],
+            [10] = [0, 19, 28] 
         };
 
         private static readonly Dictionary<ConsoleColor, int[]> color = new()
@@ -63,33 +63,47 @@ namespace GameMechanics
             return -1;
         }
 
-        public int PlayerWin(int bet, int value)
-        {
-            int wonAmount;
-            if(Mode == GameMode.leme && value == 10)
+        public int Battle(int playerScore, int hosterScore, int bet)
+        {   
+            // helper functions
+            int hosterWin()
             {
-                wonAmount = bet * 4;
+                Hoster.AddBalance(bet);
+                return -bet;
             }
-            else if((Mode == GameMode.leme && value == 1) || (Mode == GameMode.reme && value == 10))
+
+            int playerWin()
             {
-                wonAmount = bet * 3;
+                int wonAmount;
+                if(Mode == GameMode.leme && playerScore == 10)
+                {
+                    wonAmount = bet * 4;
+                }
+                else if((Mode == GameMode.leme && playerScore == 11) || (Mode == GameMode.reme && playerScore == 10))
+                {
+                    wonAmount = bet * 3;
+                }
+                else
+                {
+                    wonAmount = bet * 2;
+                }
+                Hoster.ReduceBalance(wonAmount - bet);
+                Player.AddBalance(wonAmount);
+                return wonAmount;
+            }
+
+            
+            if(Mode == GameMode.leme && playerScore == 1) playerScore = 11;
+
+            // win conditions
+            if (playerScore <= hosterScore || (Mode == GameMode.leme && playerScore == 9))
+            {
+                return hosterWin();
             }
             else
             {
-                wonAmount = bet * 2;
+                return playerWin();
             }
-            Hoster.ReduceBalance(wonAmount - bet);
-            Player.AddBalance(wonAmount);
-            return wonAmount;
         }
-
-        public int HosterWin(int bet)
-        {
-            Hoster.AddBalance(bet);
-            return bet;
-        }
-
-        
-
     }
 }

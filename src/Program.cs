@@ -58,26 +58,26 @@ namespace Game
                 Console.WriteLine($"Bet: {bet}\n");
 
                 Console.Write("Player spun the wheel and got ");
-                int player_score = Spin();
+                int playerScore = Spin();
                 Console.WriteLine();
                 Console.Write("Hoster spun the wheel and got ");
-                int hoster_score = Spin();
+                int hosterScore = Spin();
                 Console.WriteLine("\n");
 
-                player_score = Roulette.Value(player_score);
-                hoster_score = Roulette.Value(hoster_score);
+                // transforming to their equivalent value
+                playerScore = Roulette.Value(playerScore);
+                hosterScore = Roulette.Value(hosterScore);
 
-                if (game.Mode == GameMode.leme && player_score == 1) player_score = 10;
-                if (player_score <= hoster_score || hoster_score == 0 || (hoster_score == 1 && game.Mode == GameMode.leme) || (player_score == 9 && game.Mode == GameMode.leme))
+                // Battle (compare score)
+                int gained = game.Battle(playerScore, hosterScore, bet);
+                if (gained > 0)
                 {
-                    game.HosterWin(bet);
-                    Utility.PrintColored("You lost your bet", ConsoleColor.Red);
+                    Console.Write("You won ");
+                    Utility.PrintColored(gained, ConsoleColor.Green);
                 }
                 else
                 {
-                    int won = game.PlayerWin(bet, player_score);
-                    Console.Write("You won ");
-                    Utility.PrintColored(won, ConsoleColor.Green);
+                    Utility.PrintColored("You lost your bet", ConsoleColor.Red);
                 }
 
                 if (player.Balance > 0 && hoster.Balance > 0)
