@@ -36,7 +36,7 @@ A **console-based gambling game** inspired by the Growtopia mini casino games **
 2. Multipliers for special numbers:  
    - Score 0 (numbers 0, 19, 28) → ×4  
    - Score 1 (numbers 1, 10, 29) → ×3  
-3. Automatic loss for hoster if player lands on score 9 (numbers 9, 18, 27, 36).  
+3. Automatic win for hoster if player lands on score 9 (numbers 9, 18, 27, 36).  
 4. Tie → hoster wins.  
 5. Winning condition: Your score must **beat the hoster's score**.  
 
